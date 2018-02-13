@@ -1,0 +1,140 @@
+
+body {
+  background: #f0f4f5;
+  height: 100vh;
+  color: #959da6;
+  font-family: 'Roboto', sans-serif;
+  line-height: 165%;
+  font-size: 1em;
+}
+
+h1 {
+  color: #1a1a1a;
+  font-size: 1.75em;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 130%;
+}
+
+a {
+  color: #cc2929;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 20px auto auto auto;
+  min-height: 100%;
+}
+
+.singleArticle {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  background: #fff;
+  width: 430px;
+  display: inline-block;
+  margin: 15px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  will-change:transform; 
+}
+
+.singleArticle:hover {
+  box-shadow: 0 10px 20px 5px rgba(1, 1, 1, 0.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: box-shadow 300ms, transform 300ms;
+  z-index: 1;
+}
+
+.singleArticle .cover {
+  background: #ccc url("") center/cover no-repeat;
+  color: white;
+  height: 250px;
+}
+
+.singleArticle .content {
+  padding: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 1px 1px rgba(1, 1, 1, 0.05);
+  box-shadow: 0 2px 1px 1px rgba(1, 1, 1, 0.05);
+}
+
+.singleArticle .postMeta {
+  font-size: 1em;
+}
+
+.singleArticle .postMeta .comments {
+  margin-left: 10px;
+}
+
+.singleArticle .postMeta .link {
+  margin-left: 10px;
+}
+
+.singleArticle .cover .category {
+  position: absolute;
+  padding: 3px 10px;
+  margin: 20px;
+  color: #fff;
+  background-color: #cc2929;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.singleArticle .cover .category:hover {
+  background-color: #f23030;
+}
+
+*:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.modal-footer {
+  height: 350px;
+  padding: 20px 30px 20px 30px;
+  margin-bottom: 30px;
+}
+
+.comment-submit-btn {
+  background-color: #57cec2;
+  text-align: center;
+}
+
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
+  float: right;
+  margin: 16px 50px 16px 10px;
+}
+
+.footer-container {
+  margin: 20px;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.heart {
+  color: #f23030;
+}
