@@ -27,7 +27,7 @@ app.set('view engine', 'handlebars');
 // Database configuration with mongoose
 // ---------------------------------------------------------------------------------------------------------------
 // Connect to localhost if not a production environment
-if(process.env.process.env.NODE_ENV == 'production'){
+if(process.env.NODE_ENV == 'production'){
   mongoose.connect('mongodb://heroku_r8575rds:70hit1bor32rdje24e1ej0ico5@ds231228.mlab.com:31228/heroku_r8575rds'); 
 } else {
   mongoose.connect('mongodb://localhost/ArticleScraper');
