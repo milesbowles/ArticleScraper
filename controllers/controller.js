@@ -6,8 +6,8 @@ var request = require('request');
 var cheerio = require('cheerio'); 
 
 // Import models
-var Comment = require('../models/Comment.js');
-var Article = require('../models/Article.js');
+var Comment = require('../models/comment.js');
+var Article = require('../models/article.js');
 
 // Root
 router.get('/', function (req, res) {
