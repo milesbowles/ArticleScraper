@@ -51,7 +51,7 @@ var router = require('./controllers/controller.js');
 app.use('/', router);
 
 // Launch App
-//var port = process.env.PORT || 3000;
-app.listen(process.env.PORT || 3000, function(){
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
   console.log('Running on port: ' + port);
 });
