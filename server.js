@@ -46,8 +46,8 @@ db.once('open', function() {
 });
 
 // Import the Comment and Article models
-var Comment = require('./models/Comment.js');
-var Article = require('./models/Article.js');
+var Comment = require('./models/comment.js');
+var Article = require('./models/article.js');
 // ---------------------------------------------------------------------------------------------------------------
 
 // DROP DATABASE (FOR MY PERSONAL REFERENCE ONLY - YOU CAN IGNORE)
