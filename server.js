@@ -1,15 +1,15 @@
-// Node Dependencies
+// Dependencies
 var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var logger = require('morgan'); // for debugging
-var request = require('request'); // for web-scraping
-var cheerio = require('cheerio'); // for web-scraping
+var logger = require('morgan'); 
+var request = require('request'); 
+var cheerio = require('cheerio'); 
 
 
-// Initialize Express for debugging & body parsing
+// Initialize Express
 var app = express();
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
@@ -24,44 +24,34 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 
-// Database Configuration with Mongoose
+// Database configuration with mongoose
 // ---------------------------------------------------------------------------------------------------------------
 // Connect to localhost if not a production environment
-if(process.env.NODE_ENV == 'production'){
+if(process.env.process.env.NODE_ENV == 'production'){
   mongoose.connect('mongodb://heroku_r8575rds:70hit1bor32rdje24e1ej0ico5@ds231228.mlab.com:31228/heroku_r8575rds'); 
-}
-else{
+} else {
   mongoose.connect('mongodb://localhost/ArticleScraper');
 }
 var db = mongoose.connection;
-
-// Show any Mongoose errors
+// Show any mongoose errors
 db.on('error', function(err) {
   console.log('Mongoose Error: ', err);
 });
-
-// Once logged in to the db through mongoose, log a success message
+// Mongoose connection success message
 db.once('open', function() {
   console.log('Mongoose connection successful.');
 });
-
-// Import the Comment and Article models
+// Import the comment and article models
 var Comment = require('./models/comment.js');
 var Article = require('./models/article.js');
 // ---------------------------------------------------------------------------------------------------------------
 
-// DROP DATABASE (FOR MY PERSONAL REFERENCE ONLY - YOU CAN IGNORE)
-// Article.remove({}, function(err) { 
-//    console.log('collection removed') 
-// });
-
-// Import Routes/Controller
+// Import controller
 var router = require('./controllers/controller.js');
 app.use('/', router);
 
-
 // Launch App
-var port = process.env.PORT || 3000;
-app.listen(port, function(){
+//var port = process.env.PORT || 3000;
+app.listen(process.env.PORT || 3000, function(){
   console.log('Running on port: ' + port);
 });
