@@ -10,7 +10,7 @@
 
 # Curiosity Scraper
 
-A web scraper setup to grab articles from the science and technology category of [Curiosity.com](https://curiosity.com/) -- one of my favorite educational article sources. Complete with a comment section for each scraped article. 
+A web scraper setup to grab articles from the science and technology category of [Curiosity.com](https://curiosity.com/) — one of my favorite educational article sources. Complete with a comment section for each scraped article. 
 
 Currently setup to scrape:
 
@@ -24,7 +24,7 @@ Currently setup to scrape:
 * [MongoDB](https://www.mongodb.com/) - NoSQL Database
 * [Mongoose](http://mongoosejs.com/) - Object modeling
 * [Express](https://expressjs.com/) - Routing
-* [Express - Handlebars](https://github.com/ericf/express-handlebars) - Templating
+* [Express-Handlebars](https://github.com/ericf/express-handlebars) - Templating
 * [Cheerio](https://cheerio.js.org/) - Scraping
 * [BodyParser](https://github.com/expressjs/body-parser) - Parsing middleware
 * [JQuery](https://jquery.com/) - Event Handling & DOM manipulation
